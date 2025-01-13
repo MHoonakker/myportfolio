@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.typekit.net/awg1zxy.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "mundial", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #345150;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #2C4645;
+            padding: 20px;
+        }
+
+        .navbar-logo img {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #fff;
+            color: #345150;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: row; 
+        }
+
+        section#home,
+        section#info {
+            flex: 1;
+            text-align: center;
+            padding: 120px;
+            margin-top: 80px; 
+            height: calc(100vh - 200px); 
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        .main-text {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+        }
+
+        .main-text::before {
+            content: '';
+            display: block;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background-color: #FE6553;
+            margin: 0 auto -100px;
+        }
+
+        .portfolio-text {
+            font-size: 36px;
+            color: #fff;
+        }
+
+        .text-box {
+            font-size: 44px;
+            width: 700px;
+            height: 300px;
+            position: relative;
+            transform: translateY(-100%);
+            z-index: -2;
+            color: #fff;
+            background-color: #2C4645;
+            border-radius: 10px;
+        }
+
+        .text-box img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 200px; 
+            height: auto; 
+        }
+        #info { 
+            color: #fff;
+            margin-bottom: 20px; 
+            transform: translateY(-20%);
+        }
+
+        .info-heading {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .info-description {
+            font-size: 22px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="Logo.svg" alt="Logo" onclick="window.location.href='index.html';">
+        </div>
+        <ul>
+            <li><a href="index.html">THIS IS ME</a></li>
+            <li><a href="Projects.html">PREVIOUS PROJECTS</a></li>
+            <li><a href="Contact.html">GET IN CONTACT</a></li>
+            <li><a href="Hobbies.html">HOBBIES</a></li>
+        </ul>
+    </div>
+
+    <div class="content-wrapper">
+        <section id="info">
+            <div>
+                <h2 class="info-heading">Hello There!</h2>
+                <p class="info-description">My name is Manuel Hoonakker. I am 19 years old and from the beautiful Netherlands.  
+                    At the moment, I spend my days as a Creative Technology Student at the University of Twente. 
+                    I like to work on info and have a lot of fun with my peers as I am doing so. I welcome you to 
+                    my portfolio website, don't be afraid to have a look around.</p>
+            </div>
+        </section>
+        <section id="home">
+            <div>
+                <h1 class="main-text">MANUEL HOONAKKER</h1>
+                <p class="portfolio-text">Student Creative Technology</p>
+                <div class="rectangle"></div>
+                <div class="text-box">
+                    <img src="Hoofd.png" alt="Hoofd">
+                </div>
+           

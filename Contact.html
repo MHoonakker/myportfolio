@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.typekit.net/awg1zxy.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "mundial", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #345150;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #2C4645;
+            padding: 20px;
+        }
+
+        .navbar-logo img {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #fff;
+            color: #345150;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: row; 
+        }
+
+        .contact-form {
+            margin-top: 40px;
+            padding: 80px;
+            
+            width: 80%;
+            max-width: 600px;
+            margin-left: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form button {
+            font-weight: bold;
+            padding: 20px 20px;
+            background-color: #FE6553;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .contact-form button:hover {
+            background-color: #c5c5c5;
+            color: #FE6553;
+        }
+        .text-block {
+            padding: 20px;
+            background-color: #2C4645;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            color: #fff;
+            margin-left: 400px;
+            height: 420px;
+            margin-top: 200px;
+            font-size: 32px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="Logo.svg" alt="Logo" onclick="window.location.href='index.html';">
+        </div>
+        <ul>
+            <li><a href="index.html">THIS IS ME</a></li>
+            <li><a href="Projects.html">PREVIOUS PROJECTS</a></li>
+            <li><a href="Contact.html">GET IN CONTACT</a></li>
+            <li><a href="Hobbies.html">HOBBIES</a></li>
+        </ul>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="submit_contact_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+       
+        <div class="text-block">
+            <h3>Get in touch!</h3>
+            <p>Don't be afraid to send me a message, question, or request. You can also send an e-mail to: m.hoonakker@student.utwente.nl Anyway, it's nice to meet you!</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
