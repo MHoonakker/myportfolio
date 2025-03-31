@@ -18,11 +18,15 @@
         }
 
         .navbar {
+            top: 0;
+            left: 0;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             background-color: #2C4645;
             padding: 20px;
+            z-index: 1000;
         }
 
         .navbar-logo img {
@@ -54,16 +58,13 @@
             color: #345150;
         }
 
-        .content-wrapper {
-            display: flex;
-            flex-direction: row;
-        }
-
         .image-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
             gap: 20px;
-            margin: 20px;
+            padding: 20px;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         .image-grid-item {
@@ -71,14 +72,24 @@
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .image-grid-item img {
             width: 100%;
-            height: 100%;
-            object-fit: fill;
-            transition: transform 0.3s ease;
+            height: auto;
             display: block;
+        }
+
+        /* Manually scale specific images with their boxes */
+        .scale-small {
+            width: 30%;
+        }
+
+        .scale-medium {
+            width: 85%;
         }
 
         .image-grid-item:hover img {
@@ -101,18 +112,13 @@
         .image-grid-item:hover .image-grid-text {
             opacity: 1;
         }
-                .image-grid-item:nth-child(2) {
-            margin-left: -100px;
-          
-        }
     </style>
 </head>
 
 <body>
-
     <div class="navbar">
         <div class="navbar-logo">
-            <img src="img/Logo.svg" alt="Logo" onclick="window.location.href='index.html';">
+            <img src="Logo.svg" alt="Logo" onclick="window.location.href='index.html';">
         </div>
         <ul>
             <li><a href="index.html">THIS IS ME</a></li>
@@ -122,25 +128,24 @@
         </ul>
     </div>
     <div class="image-grid">
-        <div class="image-grid-item" style="width: 400px; height: auto;">
-            <img src="img/Burger.png" alt="Burger" style="width: 400px; height: auto;">
+        <div class="image-grid-item scale-big">
+            <img src="club92.png" alt="CLUB 9-2">
+            <div class="image-grid-text">My first website, created as a professional development challenge. Made with Adobe XD and Webflow.</div>
+        </div>
+        <div class="image-grid-item scale-small">
+            <img src="Burger.png" alt="Burger">
             <div class="image-grid-text">Programming an Interactive billboard in module 1</div>
         </div>
-        <div class="image-grid-item" style="width: 900px; height: 410px;">
-            <img src="img/club92.png" alt="CLUB 9-2" style="width: 900px; height: auto;">
-            <div class="image-grid-text" >My first website, created as a proffesional development challenge. Made with Adobe XD and Webflow. 
-            </div>
+        <div class="image-grid-item">
+            <img src="Statue.png" alt="Statue">
+            <div class="image-grid-text">"Ancient Treasure" game. An Indiana Jones-inspired module 1 project. The statue design is my own.</div>
         </div>
-        <div class="image-grid-item" style="width: 500px; height: 500px;">
-            <img src="img/Statue.png" alt="Statue">
-            <div class="image-grid-text">"Ancient Treasure" game. An Indiana Jones inspired module 1 project. The statue design is my own.</div>
-        </div>
-                <div class="image-grid-item" style="width: 500px; height: 500px;">
-            <img src="img/RoboCar.jpg" alt="RoboCar">
+        <div class="image-grid-item scale-small">
+            <img src="RoboCar.jpg" alt="RoboCar">
             <div class="image-grid-text">"RoboCar", A robot that identifies a frequency signal and finds the connected destination square. M5 Smart Tech.</div>
         </div>
-        <div class="image-grid-item" style="width: 384px; height: 695px;">
-            <img src="img/RugTufting.jpg" alt="Rug">
+        <div class="image-grid-item scale-small">
+            <img src="RugTufting.jpg" alt="Rug">
             <div class="image-grid-text">My first Rug Tufting project</div>
         </div>
     </div>
